@@ -10,7 +10,7 @@ const SplashPage = ({ children, home }: { children?: React.ReactNode, home?: boo
     "bg-no-repeat bg-center bg-fixed bg-cover"
   )}
 >
-  <div className="bg-black w-full h-full bg-opacity-60">
+  <div className="bg-black w-full h-full lg:bg-opacity-60">
     <nav className="py-5 mx-5 md:mx-[10%]">
       <div className="flex flex-row justify-between">
         <Image src="/images/logo.png" alt="Logo" width="100" height="0" />
