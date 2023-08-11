@@ -1,6 +1,7 @@
 'use client'
 import { useCallback, useState, useMemo } from "react";
 import Input from "@/components/Input";
+import axios from "axios";
 
 enum LOGIN_MODE {
   LOGIN,
@@ -20,6 +21,18 @@ const LoginRegisterForm = () => {
       ? LOGIN_MODE.REGISTER
       : LOGIN_MODE.LOGIN
     );
+  }, []);
+  
+  const register = useCallback(async () => {
+    try {
+      await axios.post("/api/register", {
+        email,
+        userName,
+        password
+      })
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (
